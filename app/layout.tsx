@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { Playfair } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair({ subsets: ["cyrillic"], variable: "--font-playfair" });
+const playfair = Playfair({
+  subsets: ["cyrillic"],
+  variable: "--font-playfair"
+});
 
 
 export const metadata: Metadata = {
