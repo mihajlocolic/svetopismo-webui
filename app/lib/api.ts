@@ -11,3 +11,10 @@ export async function searchVerses(input:string) {
     if(!res.ok) throw new Error("Failed to fetch verse search results from the API.");
     return res.json();
 }
+
+export async function getBookChapters(id:number) {
+    const res = await fetch(`${API_URL}/books/${id}`);
+    if(!res.ok) throw new Error("Failed to fetch book chapters from the API.");
+    const data = await res.json();
+    return data;
+}
