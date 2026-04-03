@@ -7,7 +7,7 @@ const ponomar = Ponomar({ subsets: ["cyrillic"], weight: '400' });
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <h3 className={`nameHeader ${ponomar.className} text-6xl p-4`}>Свето Писмо</h3>
+      <a href="./" className={`nameHeader ${ponomar.className} text-6xl p-4`}>Свето Писмо</a>
       <div className="flex p-4">
         <div className="flex justify-left p-4">
           <BookList/>
