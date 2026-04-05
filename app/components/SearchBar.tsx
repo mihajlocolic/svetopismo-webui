@@ -44,6 +44,7 @@ export default function SearchBar() {
             </div>
             <div className="flex-1 flex-col gap-4 rounded-md p-4">
                 <h3 className="text-2xl p-4">{verses.length < 1 ? "" : "Резултати претраге: " + verses.length + " стихова."}</h3>
+                <Pagination currentPage={currentPage} totalPages={Math.ceil(verses.length / 10)} onPageChange={(page) => setCurrentPage(page)} />
                 <div className="flex flex-col gap-2 text-2xl">
                     {verses.slice(currentPage * 10, (currentPage + 1) * 10).map(verse => (
                         <div key={verse.id} className="searchResult rounded-md border border-gray-300 p-4">
@@ -51,7 +52,6 @@ export default function SearchBar() {
                             <p>{verse.verseText}</p>
                         </div>
                     ))}
-                    <Pagination currentPage={currentPage} totalPages={Math.ceil(verses.length / 10)} onPageChange={(page) => setCurrentPage(page)} />
                 </div>
             </div>
         </div>
