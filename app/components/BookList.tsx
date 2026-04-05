@@ -83,7 +83,7 @@ export default function BookList() {
                         {chapters.map((chapter) => (
                             <li className="chapterItem" key={chapter.chapterId} onClick={() => handleChapterSelect(chapter)}>{` ${chapter.chapterNumber} `}</li>
                         ))}
-                        {book && (<li id="deselectButton" className="rounded-md bg-red-950 px-2 py-2 text-white text-xl hover:bg-red-800 focus:outline-none focus:ring focus:ring-red-200 focus:ring-opacity-50 select-none" onClick={() => handleBookDeselect()}>Deselect</li>)}
+                        {book && (<li id="deselectButton" className="rounded-md bg-red-950 px-2 py-2 text-white text-xl hover:bg-red-800 focus:outline-none focus:ring focus:ring-red-200 focus:ring-opacity-50 select-none" onClick={() => handleBookDeselect()}>Затвори</li>)}
                     </ul>   
                 </div>
             )}
