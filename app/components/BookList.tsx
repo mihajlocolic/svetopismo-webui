@@ -54,7 +54,7 @@ export default function BookList() {
     }
 
     async function handleChapterSelect(chapter: Chapter) {
-        getChapter(chapter.chapterNumber).then((data) => {
+        getChapter(chapter.chapterId).then((data) => {
             if(data) {
                 console.log(data);
                 setSelectedChapter(data);

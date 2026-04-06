@@ -19,8 +19,8 @@ export async function getBookChapters(id:number) {
     return data;
 }
 
-export async function getChapter(chapterNumber:number) {
-    const res = await fetch(`${API_URL}/chapters/${chapterNumber}`);
+export async function getChapter(chapterId:number) {
+    const res = await fetch(`${API_URL}/chapters/${chapterId}`);
     if(!res.ok) throw new Error("Failed to fetch chapter details from the API.");
     return res.json();
 }

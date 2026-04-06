@@ -9,6 +9,7 @@ export default function Home() {
     <div className="flex flex-col">
       <a href="./" className={`nameHeader ${ponomar.className} text-6xl p-4`}>Свето Писмо</a>
       <div className="flex p-4">
+        
         <div className="flex justify-left p-4">
           <BookList/>
         </div>
